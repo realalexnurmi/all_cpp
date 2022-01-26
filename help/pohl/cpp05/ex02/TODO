@@ -1,0 +1,5 @@
+Add in Form class:
+	- execute function = 0;
+	- checkExecutability function (throws exception on error)
+
+Implement the 2 other Classes remaining

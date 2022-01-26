@@ -1,0 +1,54 @@
+#!/bin/bash
+# Date: 2021/07/19
+# Description: Tests the ex07 of the project cpp01
+
+# Defining escape sequences
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+BOLD='\033[0;1m'
+RESET='\033[0m'
+
+# Functions
+singleLetterRead() {
+	text="$1"
+
+	read -n1 -s -r -p "$text" key
+	echo "$key"
+}
+
+launchTest() {
+	testName="$1"
+	fileToModify="$2"
+	stringToReplace="$3"
+	replacement="$4"
+
+	echo ""
+	echo "-------------"
+	echo -e "$BOLD$testName:$RESET \"./replace $fileToModify $stringToReplace $replacement\""
+	./replace "$fileToModify" "$stringToReplace" "$replacement" > /dev/null
+	echo -e "$BLUE""Original file: $RESET"
+	/bin/cat "$fileToModify"
+	echo -e "$GREEN""Modified file: $RESET"
+	/bin/cat "$fileToModify".replace
+	singleLetterRead "Press any key to continue..." > /dev/null
+	echo ""
+}
+
+# Compiling project
+echo "Compiling project"
+make
+
+# Launching tests
+launchTest "Normal test" "./testFiles/normalTest" "un" "unun"
+launchTest "Single character test" "./testFiles/normalTest" "e" "f"
+launchTest "Special character test" "./testFiles/normalTest" "," '!'
+launchTest "No new line" "./testFiles/noNewLine" "o" "q"
+launchTest "Weird test" "./testFiles/weirdTest" "sasa" "drink"
+
+# Clean up
+key=$(singleLetterRead 'Clean up? (yn)')
+echo ""
+if [ "$key" = "y" ]; then
+	make fclean
+	rm ./testFiles/*.replace
+fi
