@@ -6,7 +6,7 @@
 #    By: enena <enena@student.21-school.ru>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/21 00:21:25 by enena             #+#    #+#              #
-#    Updated: 2022/01/27 05:13:35 by enena            ###   ########.fr        #
+#    Updated: 2022/01/27 06:19:55 by enena            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SHELL = /bin/sh
 NAME	=	a.out
 SRCS	=	Bureaucrat.cpp Form.cpp\
 			PresidentialPardonForm.cpp ShrubberyCreationForm.cpp\
-			RobotomyRequestForm.cpp main.cpp 
+			RobotomyRequestForm.cpp Intern.cpp main.cpp 
 FLAGS	=	-Wall -Wextra -Werror -std=c++98
 CC		=	c++
 OBJS	=	$(SRCS:%.cpp=%.o)

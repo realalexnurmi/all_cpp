@@ -6,7 +6,7 @@
 /*   By: enena <enena@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 05:09:49 by enena             #+#    #+#             */
-/*   Updated: 2022/01/26 07:18:16 by enena            ###   ########.fr       */
+/*   Updated: 2022/01/27 00:27:05 by enena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,10 @@ Form::Form(const std::string& name, unsigned int gradeSign,
 
 Form::Form(const Form& init) :
 	_name(init.getName()),
-	_signed(false),
+	_signed(init.isSigned()),
 	_gradeSign(init.getGradeSign()),
 	_gradeExecute(init.getGradeExecute())
 {
-	this->operator=(init);
 	std::cout << *this << " Copy ctor called!" << std::endl;
 }
 
