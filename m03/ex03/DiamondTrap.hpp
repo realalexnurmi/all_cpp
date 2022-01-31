@@ -6,7 +6,7 @@
 /*   By: enena <enena@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 16:25:05 by enena             #+#    #+#             */
-/*   Updated: 2022/01/23 18:49:18 by enena            ###   ########.fr       */
+/*   Updated: 2022/01/30 19:44:11 by enena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
 
-class DiamondTrap : public ScavTrap, public FragTrap
+class DiamondTrap :  public FragTrap, public ScavTrap
 {
 private:
 	std::string		_name;

@@ -6,7 +6,7 @@
 /*   By: enena <enena@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 08:06:05 by enena             #+#    #+#             */
-/*   Updated: 2022/01/23 18:39:31 by enena            ###   ########.fr       */
+/*   Updated: 2022/01/30 19:40:36 by enena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,27 @@
 
 int	main(void)
 {
-	ClapTrap	clapTrap("BigPile");
-	ScavTrap	scavTrap("YourLeg");
+	// ClapTrap	clapTrap("BigPile");
+	// ScavTrap	scavTrap("YourLeg");
 
-	clapTrap.attack(scavTrap.getName());
-	scavTrap.takeDamage(clapTrap.getAttackDamage());
-	clapTrap.beRepaired(10);
+	// clapTrap.attack(scavTrap.getName());
+	// scavTrap.takeDamage(clapTrap.getAttackDamage());
+	// clapTrap.beRepaired(10);
 	
-	scavTrap.attack(clapTrap.getName());
-	clapTrap.takeDamage(scavTrap.getAttackDamage());
-	scavTrap.beRepaired(20);
-	scavTrap.guardGate();
+	// scavTrap.attack(clapTrap.getName());
+	// clapTrap.takeDamage(scavTrap.getAttackDamage());
+	// scavTrap.beRepaired(20);
+	// scavTrap.guardGate();
 
-	FragTrap	fragTrap("goodGuyButSlowly");
+	// FragTrap	fragTrap("goodGuyButSlowly");
 
-	fragTrap.highFivesGuys();
+	// fragTrap.highFivesGuys();
 
-	std::cout << "==========================================" << std::endl;
-	std::cout << "===========Begin of Diamond Part==========" << std::endl;
-	std::cout << "==========================================" << std::endl;
+	// std::cout << "==========================================" << std::endl;
+	// std::cout << "===========Begin of Diamond Part==========" << std::endl;
+	// std::cout << "==========================================" << std::endl;
 
-	DiamondTrap	diamondTrap("Alex Nurmi");
+	DiamondTrap	diamondTrap;
 
 	diamondTrap.attack("air around him");
 	diamondTrap.takeDamage(diamondTrap.getAttackDamage());

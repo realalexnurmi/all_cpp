@@ -6,7 +6,7 @@
 /*   By: enena <enena@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 11:30:19 by enena             #+#    #+#             */
-/*   Updated: 2022/01/23 17:55:50 by enena            ###   ########.fr       */
+/*   Updated: 2022/01/30 19:34:03 by enena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 ScavTrap::ScavTrap(void)
 {
 	this->setName("ScavProx");
-	this->setHitPoints(100);
+	this->setHitPoints(666);
 	this->setEnergyPoints(50);
-	this->setAttackDamage(20);
+	this->setAttackDamage(50);
 	this->setGuardGateMode(false);
 	std::cout << "ScavTrap <" << this->getName()
 		<< "> arrived as default." << std::endl;

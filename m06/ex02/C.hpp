@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   A.hpp                                              :+:      :+:    :+:   */
+/*   C.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enena <enena@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/24 19:06:28 by pohl              #+#    #+#             */
-/*   Updated: 2022/01/29 15:33:01 by enena            ###   ########.fr       */
+/*   Created: 2022/01/29 15:40:20 by enena             #+#    #+#             */
+/*   Updated: 2022/01/29 16:33:19 by enena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef A_HPP
-# define A_HPP
+#ifndef C_HPP
+# define C_HPP
 
 # include <iostream>
+# include <string>
 # include "Base.hpp"
 
-class A: public Base
+class C : public Base
 {
-
-public:
-
-	A( void );
-	A( const A &src );
-	~A( void );
-
-	A	&operator=( const A &rhs );
-
 private:
+	std::string	secret;
+public:
+	C(void);
+	~C(void);
 
+	const std::string&	whoIm(void) const;
 };
 
-std::ostream	&operator<<( std::ostream &ostr, const A &instance );
+std::ostream&			operator<<(std::ostream& out, const C& src);
 
 #endif

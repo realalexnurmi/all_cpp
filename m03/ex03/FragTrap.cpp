@@ -6,7 +6,7 @@
 /*   By: enena <enena@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 11:30:19 by enena             #+#    #+#             */
-/*   Updated: 2022/01/23 17:54:29 by enena            ###   ########.fr       */
+/*   Updated: 2022/01/30 19:33:55 by enena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 FragTrap::FragTrap(void)
 {
 	this->setName("FragProx");
-	this->setHitPoints(100);
+	this->setHitPoints(999);
 	this->setEnergyPoints(50);
-	this->setAttackDamage(20);
+	this->setAttackDamage(100);
 	std::cout << "FragTrap <" << this->getName()
 		<< "> arrived as default." << std::endl;
 }

@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   A.hpp                                              :+:      :+:    :+:   */
+/*   C.cpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enena <enena@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/24 19:06:28 by pohl              #+#    #+#             */
-/*   Updated: 2022/01/29 15:33:01 by enena            ###   ########.fr       */
+/*   Created: 2022/01/29 15:40:34 by enena             #+#    #+#             */
+/*   Updated: 2022/01/29 15:41:31 by enena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "C.hpp"
 
-#ifndef A_HPP
-# define A_HPP
-
-# include <iostream>
-# include "Base.hpp"
-
-class A: public Base
+C::C(void)
 {
+	this->secret = "I'm C!";
+}
 
-public:
+C::~C(void)
+{
+}
 
-	A( void );
-	A( const A &src );
-	~A( void );
+const std::string&	C::whoIm(void) const
+{
+	return this->secret;
+}
 
-	A	&operator=( const A &rhs );
-
-private:
-
-};
-
-std::ostream	&operator<<( std::ostream &ostr, const A &instance );
-
-#endif
+std::ostream&		operator<<(std::ostream& out, const C& src)
+{
+	out << src.whoIm() << std::endl;
+	return out;
+}

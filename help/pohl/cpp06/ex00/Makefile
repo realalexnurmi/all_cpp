@@ -16,7 +16,7 @@ SRCS	= main.cpp TypeAnalyst.cpp utils.cpp
 # Compiler
 CC		= clang++
 # Compiler flags
-CFLAGS	+= -Wall -Wextra -std=c++98
+CFLAGS	+= -Wall -Wextra -std=c++98 -g
 # Assembly flags (add the libraries here for linux)
 LDFLAGS	+= 
 

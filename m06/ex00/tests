@@ -1,6 +1,4 @@
 #!/bin/bash
-# Date: 2021/10/21
-# Description: tests the cpp06/ex00 project
 
 test_convert() {
 	echo "./convert" "$*"

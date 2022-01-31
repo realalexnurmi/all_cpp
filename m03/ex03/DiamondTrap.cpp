@@ -6,7 +6,7 @@
 /*   By: enena <enena@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 16:25:01 by enena             #+#    #+#             */
-/*   Updated: 2022/01/23 19:06:17 by enena            ###   ########.fr       */
+/*   Updated: 2022/01/30 19:43:43 by enena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@ DiamondTrap::DiamondTrap(void)
 {
 	ClapTrap::setName("Prox_clap_name");
 	this->setName("Prox");
-	this->setHitPoints(FragTrap::getHitPoints());
+	this->setHitPoints(ScavTrap::getHitPoints());
 	this->setEnergyPoints(ScavTrap::getEnergyPoints());
 	this->setAttackDamage(FragTrap::getAttackDamage());
 	std::cout << "DiamondTrap <" << this->getName()
 		<< "> arrived as default." << std::endl;
+	std::cout << "HP: " << ScavTrap::_hitPoints << "Attack: " << FragTrap::_attackDamage << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const std::string& name)

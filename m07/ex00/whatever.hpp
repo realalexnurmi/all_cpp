@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   A.hpp                                              :+:      :+:    :+:   */
+/*   whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enena <enena@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/24 19:06:28 by pohl              #+#    #+#             */
-/*   Updated: 2022/01/29 15:33:01 by enena            ###   ########.fr       */
+/*   Created: 2022/01/29 18:30:25 by enena             #+#    #+#             */
+/*   Updated: 2022/01/30 00:37:50 by enena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef WHATEVER_HPP
+# define WHATEVER_HPP
 
-#ifndef A_HPP
-# define A_HPP
-
-# include <iostream>
-# include "Base.hpp"
-
-class A: public Base
+template<typename T>
+void		swap(T& a, T& b)
 {
+	T tmp = a;
 
-public:
+	a = b;
+	b = tmp;
+}
 
-	A( void );
-	A( const A &src );
-	~A( void );
+template<typename T>
+const T&	min(const T& a, const T& b)
+{
+	return (a < b ? a : b);
+}
 
-	A	&operator=( const A &rhs );
-
-private:
-
-};
-
-std::ostream	&operator<<( std::ostream &ostr, const A &instance );
+template<typename T>
+const T&	max(const T& a, const T& b)
+{
+	return (a > b ? a : b);
+}
 
 #endif

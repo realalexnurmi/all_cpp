@@ -1,0 +1,182 @@
+./convert c
+char: c
+int: 99
+float: 99.0f
+double: 99.0
+./convert 5
+char: Non displayable
+int: 5
+float: 5.0f
+double: 5.0
+./convert -5
+char: impossible
+int: -5
+float: -5.0f
+double: -5.0
+./convert +5
+The input is not a valid char, int, float or double
+./convert {char, int, float or double}
+./convert 3.15f
+char: impossible
+int: 3
+float: 3.15f
+double: 3.15
+./convert 42.42
+char: impossible
+int: 42
+float: 42.42f
+double: 42.42
+./convert .128f
+char: impossible
+int: 0
+float: 0.128f
+double: 0.128
+./convert -.256f
+char: impossible
+int: 0
+float: -0.256f
+double: -0.256
+./convert +.512f
+The input is not a valid char, int, float or double
+./convert {char, int, float or double}
+./convert 100.f
+char: d
+int: 100
+float: 100.0f
+double: 100.0
+./convert .
+char: .
+int: 46
+float: 46.0f
+double: 46.0
+./convert f
+char: f
+int: 102
+float: 102.0f
+double: 102.0
+./convert -
+char: -
+int: 45
+float: 45.0f
+double: 45.0
+./convert 0.
+char: Non displayable
+int: 0
+float: 0.0f
+double: 0.0
+./convert .6
+char: impossible
+int: 0
+float: 0.6f
+double: 0.6
+./convert inff
+char: impossible
+int: impossible
+float: inff
+double: inf
+./convert +inff
+char: impossible
+int: impossible
+float: inff
+double: inf
+./convert -inff
+char: impossible
+int: impossible
+float: -inff
+double: -inf
+./convert nanf
+char: impossible
+int: impossible
+float: nanf
+double: nan
+./convert inf
+char: impossible
+int: impossible
+float: inff
+double: inf
+./convert +inf
+char: impossible
+int: impossible
+float: inff
+double: inf
+./convert -inf
+char: impossible
+int: impossible
+float: -inff
+double: -inf
+./convert nan
+char: impossible
+int: impossible
+float: nanf
+double: nan
+./convert 1995
+char: impossible
+int: 1995
+float: 1995.0f
+double: 1995.0
+./convert 2147483647
+char: impossible
+int: 2147483647
+float: 2.14748e+09.0f
+double: 2.14748e+09.0
+./convert 2147483648
+char: impossible
+int: -2147483648
+float: -2.14748e+09.0f
+double: -2.14748e+09.0
+./convert -2147483648
+char: impossible
+int: -2147483648
+float: -2.14748e+09.0f
+double: -2.14748e+09.0
+./convert -2147483649
+char: impossible
+int: 2147483647
+float: 2.14748e+09.0f
+double: 2.14748e+09.0
+./convert 9999999999999999999999999999999999999999.0
+char: impossible
+int: impossible
+float: impossible
+double: 1e+40
+./convert x 0.3542 64 62.0f
+char: x
+int: 120
+float: 120.0f
+double: 120.0
+
+char: impossible
+int: 0
+float: 0.3542f
+double: 0.3542
+
+char: @
+int: 64
+float: 64.0f
+double: 64.0
+
+char: >
+int: 62
+float: 62.0f
+double: 62.0
+./convert wel
+The input is not a valid char, int, float or double
+./convert {char, int, float or double}
+./convert 18f
+The input is not a valid char, int, float or double
+./convert {char, int, float or double}
+./convert .f
+The input is not a valid char, int, float or double
+./convert {char, int, float or double}
+./convert -.f
+The input is not a valid char, int, float or double
+./convert {char, int, float or double}
+./convert 4.24.2
+The input is not a valid char, int, float or double
+./convert {char, int, float or double}
+./convert 0.256f12
+The input is not a valid char, int, float or double
+./convert {char, int, float or double}
+./convert 
+Please enter an input to be analysed by the converter
+./convert {char, int, float or double}

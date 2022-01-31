@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   A.hpp                                              :+:      :+:    :+:   */
+/*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enena <enena@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/24 19:06:28 by pohl              #+#    #+#             */
-/*   Updated: 2022/01/29 15:33:01 by enena            ###   ########.fr       */
+/*   Created: 2022/01/30 16:53:19 by enena             #+#    #+#             */
+/*   Updated: 2022/01/30 19:54:22 by enena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#ifndef A_HPP
-# define A_HPP
+#ifndef MUTANTSTACK_HPP
+# define MUTANTSTACK_HPP
 
+# include <stack>
 # include <iostream>
-# include "Base.hpp"
 
-class A: public Base
+template<typename T>
+class MutantStack : public std::stack<T>
 {
-
 public:
+	typedef typename std::stack<T>::container_type::iterator iterator;
 
-	A( void );
-	A( const A &src );
-	~A( void );
+	MutantStack(void);
+	MutantStack(const MutantStack<T>& init);
+	~MutantStack(void);
 
-	A	&operator=( const A &rhs );
+	MutantStack<T>&		operator=(const MutantStack<T>& other);
 
-private:
-
+	iterator			begin(void);
+	iterator			end(void);
 };
-
-std::ostream	&operator<<( std::ostream &ostr, const A &instance );
 
 #endif

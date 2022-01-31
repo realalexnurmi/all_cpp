@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   A.hpp                                              :+:      :+:    :+:   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enena <enena@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/24 19:06:28 by pohl              #+#    #+#             */
-/*   Updated: 2022/01/29 15:33:01 by enena            ###   ########.fr       */
+/*   Created: 2022/01/29 20:51:09 by enena             #+#    #+#             */
+/*   Updated: 2022/01/30 18:58:08 by enena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef A_HPP
-# define A_HPP
+#ifndef ARRAY_HPP
+# define ARRAY_HPP
 
 # include <iostream>
-# include "Base.hpp"
+# include <string>
 
-class A: public Base
+template<typename T>
+class Array
 {
+private:
+	size_t	_size;
+	T*		_array;
 
 public:
+	Array(void);
+	Array(const unsigned int size);
+	Array(const Array<T>& init);
+	~Array(void);
 
-	A( void );
-	A( const A &src );
-	~A( void );
 
-	A	&operator=( const A &rhs );
+	Array<T>&	operator=(const Array<T>& other);
+	T&			operator[](const size_t ind) const;
 
-private:
-
+	size_t		size(void) const;
 };
-
-std::ostream	&operator<<( std::ostream &ostr, const A &instance );
 
 #endif

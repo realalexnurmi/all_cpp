@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   A.hpp                                              :+:      :+:    :+:   */
+/*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enena <enena@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/24 19:06:28 by pohl              #+#    #+#             */
-/*   Updated: 2022/01/29 15:33:01 by enena            ###   ########.fr       */
+/*   Created: 2022/01/29 13:50:42 by enena             #+#    #+#             */
+/*   Updated: 2022/01/29 15:21:59 by enena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef DATA_HPP
+# define DATA_HPP
 
-#ifndef A_HPP
-# define A_HPP
+# include <string>
 
-# include <iostream>
-# include "Base.hpp"
-
-class A: public Base
+typedef struct	s_Data
 {
-
-public:
-
-	A( void );
-	A( const A &src );
-	~A( void );
-
-	A	&operator=( const A &rhs );
-
-private:
-
-};
-
-std::ostream	&operator<<( std::ostream &ostr, const A &instance );
+	std::string	data;
+	int			count;
+	s_Data*		next;
+}				Data;
 
 #endif
